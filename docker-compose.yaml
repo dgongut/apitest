@@ -1,0 +1,12 @@
+services:
+    test-apy:
+        container_name: testapy
+        env_file:
+          - .env
+        ports:
+          - 21000:5000
+        network_mode: bridge
+        build:
+          context: .
+          dockerfile: ./Dockerfile_local
+        tty: true
